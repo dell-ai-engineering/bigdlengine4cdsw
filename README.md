@@ -7,11 +7,11 @@ This repository contains the preconfigured engine for the Dell EMC Ready Solutio
 ### Build image and push to a Docker repository
     sudo yum install docker
     sudo systemctl start docker
-Build the container
+#### Build the container
     docker build --network=host -t dell/bigdl:0.5.0 . -f Dockerfile
-Test that it works
+#### Test that it works
     docker run -it dell/bigdl:0.5.0 /bin/bash
-Push the container image
+#### Push the container image
     docker push dell/bigdl:0.5.0
 
 ### Add the engine to CDSW
