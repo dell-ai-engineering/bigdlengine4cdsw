@@ -14,8 +14,8 @@ This repository contains the preconfigured engine for the Dell EMC Ready Solutio
 #### Push the container image
     docker push dellrepo/bigdl:0.5.0
 
-#### If you need to run a docker registry 
-#### Run registry container
+#### If you need to run a docker registry: 
+Run registry container
     docker run -d -p 5000:5000 --restart=always registry registry:2
 Change the docker repo from dellrepo to \<hostname>:5000 when tagging images
 
