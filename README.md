@@ -7,6 +7,9 @@ This repository contains the preconfigured engine for the Dell EMC Ready Solutio
 - BigDL 0.5.0
 - Spark 2.2
 - Scala 2.11.8
+- Java 8
+
+Intel BigDL recommends Java 8 when using Spark 2.x as Java 7 may cause performance issues. If you are required to use Java 7 then follow the instructions to [build from source](https://bigdl-project.github.io/master/#ScalaUserGuide/install-build-src/#download-bigdl-source) using an environment with Java 7. Then replace the /opt/Intel directory with the Java 7 compiled BigDL and edit the spark.jars in spark-defaults.conf file if using the Jumpstart templates.
 
 ## How to use
 #### Build image and push to a Docker repository
