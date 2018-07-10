@@ -16,7 +16,9 @@ This repository contains the preconfigured engine for the Dell EMC Ready Solutio
 
 #### If you need to run a docker registry: 
 Run registry container
-    docker run -d -p 5000:5000 --restart=always registry registry:2
+```
+docker run -d -p 5000:5000 --restart=always registry registry:2
+```
 Change the docker repo from dellrepo to \<hostname>:5000 when tagging images
 
 ### Add the engine to CDSW
