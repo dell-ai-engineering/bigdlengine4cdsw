@@ -1,7 +1,7 @@
 # DellEMC BigDL Engine for Cloudera Data Science Workbench
 
 ## Overview
-This repository contains the preconfigured engine for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. The engine engine is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark. Jumpstart examples are located in the [BigDL4CDSW](https://github.com/dell-ai-engineering/BigDL4CDSW) repository.
+This repository contains the preconfigured engine for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. The engine is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark. Jumpstart examples are located in the [BigDL4CDSW](https://github.com/dell-ai-engineering/BigDL4CDSW) repository.
 
 ### Versions
 - BigDL 0.5.0
