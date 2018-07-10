@@ -3,6 +3,11 @@
 ## Overview
 This repository contains the preconfigured engine for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. The engine engine is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark.
 
+### Versions
+- BigDL 0.5.0
+- Spark 2.2
+- Scala 2.11.8
+
 ## How to use
 #### Build image and push to a Docker repository
     sudo yum install docker
