@@ -4,15 +4,20 @@
 This repository contains the preconfigured engine for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. The engine engine is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark.
 
 ## How to use
-### Build image and push to a Docker repository
+#### Build image and push to a Docker repository
     sudo yum install docker
     sudo systemctl start docker
 #### Build the container
-    docker build --network=host -t dell/bigdl:0.5.0 . -f Dockerfile
+    docker build --network=host -t dellrepo/bigdl:0.5.0 . -f Dockerfile
 #### Test that it works
-    docker run -it dell/bigdl:0.5.0 /bin/bash
+    docker run -it dellrepo/bigdl:0.5.0 /bin/bash
 #### Push the container image
-    docker push dell/bigdl:0.5.0
+    docker push dellrepo/bigdl:0.5.0
+
+#### (Below not required unless you need a repository)
+#### If you do not have a docker repository you can run one
+    docker run -d -p 5000:5000 --restart=always registry registry:2
+#### Change the docker repo from dellrepo to <hostname>:5000 when tagging images
 
 ### Add the engine to CDSW
 1. Log in to CDSW as a site administrator
