@@ -30,6 +30,9 @@ docker run -d -p 5000:5000 --restart=always registry registry:2
 ```
 Change the docker repo from dellrepo to \<hostname>:5000 when tagging images
 
+A docker registry is secured using TLS and requires a certificate. [Docker registry configuration guide](https://docs.docker.com/registry/deploying/)
+If you must use a self signed certificate follow the [Docker guide for an insecure registry server](https://docs.docker.com/registry/insecure/#use-self-signed-certificates)
+
 ### Add the engine to CDSW
 1. Log in to CDSW as a site administrator
 2. Go to Admin and then Engines
