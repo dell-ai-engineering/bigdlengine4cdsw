@@ -24,11 +24,19 @@ Intel BigDL recommends Java 8 when using Spark 2.x as Java 7 may cause performan
     docker push dellrepo/bigdl:0.5.0
 
 #### If you need to run a docker registry: 
-Run registry container
+Run registry container, assumes certificate is in a certs directory under the dockerfile.
 ```
-docker run -d -p 5000:5000 --restart=always registry registry:2
+docker run -d \
+  --restart=always \
+  --name registry \
+  -v `pwd`/certs:/certs \
+  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+  -p 443:443 \
+  registry:2
 ```
-Change the docker repo from dellrepo to \<hostname>:5000 when tagging images
+Change the docker repo from dellrepo to \<hostname\> when tagging images
 
 A docker registry is secured using TLS and requires a certificate. [Docker registry configuration guide](https://docs.docker.com/registry/deploying/)
 If you must use a self signed certificate follow the [Docker guide for an insecure registry server](https://docs.docker.com/registry/insecure/#use-self-signed-certificates)
