@@ -52,7 +52,9 @@ Build the container for Analytics Zoo
 Change the docker repo from ```<registry-name>``` to docker registry name.
 
 #### Test that it works
+```
     docker run -it <registry-name>/bigdl:0.6.0 /bin/bash
+```
 OR
 ```
     docker run -it <registry-name>/analytics-zoo:0.2.0 /bin/bash
@@ -60,7 +62,9 @@ OR
 You can exit out of the container by typing 'exit'.
 
 #### Push the container image
+```
     docker push <registry-name>/bigdl:0.6.0
+```
 OR
 ```
     docker push <registry-name>/analytics-zoo:0.2.0
