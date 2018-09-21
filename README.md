@@ -81,3 +81,7 @@ OR
 3. Open a new workbench session
 4. Before starting the workbench change the selection to the new BigDL engine or Analytics Zoo engine
 5. Start the engine by opening a workbench
+
+
+* Need to write a note on spark-defaults.conf
+* Need to write a note on different BigDL downloads
