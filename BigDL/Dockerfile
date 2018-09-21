@@ -1,4 +1,4 @@
-FROM docker.repository.cloudera.com/cdsw/engine:4
+FROM docker.repository.cloudera.com/cdsw/engine:5
 
 RUN apt-get  update && \
     apt-get install -y -q git maven
