@@ -10,6 +10,8 @@ This repository contains preconfigured engines for the Dell EMC Ready Solution f
 - Scala 2.11.8
 - Java 8
 
+Note: The Dockerfile to build these engines use BigDL and Analytic Zoo builds that are specific for above versions of Spark and Scala. If your environment has other versions of Spark, edit the Dockerfile accordingly. 
+
 #### Note on Java 7
 Intel BigDL recommends Java 8 when using Spark 2.x as Java 7 may cause performance issues. If you are required to use Java 7 then follow the instructions to [build from source](https://bigdl-project.github.io/master/#ScalaUserGuide/install-build-src/#download-bigdl-source) using an environment with Java 7. Then replace the /opt/Intel directory with the Java 7 compiled BigDL and edit the spark.jars in spark-defaults.conf file if using the Jumpstart templates.
 
@@ -78,10 +80,12 @@ OR
 ### Verify that the engine works
 1. Log in to CDSW
 2. Create a new project
-3. Open a new workbench session
-4. Before starting the workbench change the selection to the new BigDL engine or Analytics Zoo engine
-5. Start the engine by opening a workbench
+3. Copy the spark-defaults.conf file from the respository to the root folder of the CDSW project 
+4. Open a new workbench session
+5. Before starting the workbench change the selection to the new BigDL engine or Analytics Zoo engine
+6. Start the engine by opening a workbench
 
 
-* Need to write a note on spark-defaults.conf
-* Need to write a note on different BigDL downloads
+### spark-defaults.conf
+For both BigDL and Analytic Zoo, sample spark-defaults.conf files are provided in the corresponding folder. These files need to be copied to the root directory of each CDSW project. The files specifies the Spark parameters for the project. The parameters must be edited to suite the requirements for the project
+
