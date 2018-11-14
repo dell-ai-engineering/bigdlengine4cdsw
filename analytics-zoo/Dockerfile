@@ -17,6 +17,6 @@ ENV DL_ENGINE_TYPE=mklblas
 ENV KMP_BLOCKTIME=0
 ENV OMP_WAIT_POLICY=passive
 ENV OMP_NUM_THREADS=1
-ENV ANALYTICS_ZOO_PY_ZIP=/opt/Intel/lib/analytics-zoo-bigdl_0.6.0-spark_2.1.1-0.2.0-python-api.zip
+ENV ANALYTICS_ZOO_PY_ZIP=/opt/Intel/lib/analytics-zoo-bigdl_0.6.0-spark_2.2.0-0.3.0-python-api.zip
 ENV PYTHONPATH=/opt/Intel/lib/analytics-zoo-bigdl_0.6.0-spark_2.2.0-0.3.0-python-api.zip:/opt/Intel/lib/analytics-zoo-bigdl_0.6.0-spark_2.2.0-0.3.0-jar-with-dependencies.jar:${PYTHONPATH}
 ENV VENV_HOME=/opt/Intel/bin
