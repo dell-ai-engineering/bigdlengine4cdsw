@@ -87,5 +87,5 @@ OR
 
 
 ### spark-defaults.conf
-For both BigDL and Analytic Zoo, sample spark-defaults.conf files are provided in the corresponding folder. These files need to be copied to the root directory of each CDSW project. The files specifies the Spark parameters for the project. The parameters must be edited to suite the requirements for the project
+For both BigDL and Analytic Zoo, sample spark-defaults.conf files are provided in the corresponding folder. These files need to be copied to the root directory of each CDSW project. The files specify the Spark parameters for the project. The parameters must be edited to suit the requirements for the project.
 
