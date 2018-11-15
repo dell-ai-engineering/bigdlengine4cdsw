@@ -74,16 +74,16 @@ OR
 
 ### Add the engine to CDSW
 1. Log in to CDSW as a site administrator
-2. Go to Admin and then Engines
-3. Name the engine and add the docker registry location
+2. Go to "Admin" followed by "Engines"
+3. On a blank line: name the engine, specify the docker registry location, and add this new entry
 
 ### Verify that the engine works
 1. Log in to CDSW
 2. Create a new project
 3. Copy the spark-defaults.conf file from the respository to the root folder of the CDSW project 
 4. Open a new workbench session
-5. Before starting the workbench change the selection to the new BigDL engine or Analytics Zoo engine
-6. Start the engine by opening a workbench
+5. Before starting the workbench change the engine image selection to the new BigDL or Analytics Zoo engine
+6. Start the engine by choosing "Launch Session"
 
 
 ### spark-defaults.conf
