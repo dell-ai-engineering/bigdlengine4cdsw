@@ -4,8 +4,8 @@
 This repository contains preconfigured engines for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. There are two engines. One is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark. The other is configured with [Analytics Zoo](http://analytics-zoo.github.io/) a unified analytics + AI platform for Spark. Jumpstart examples are located in the [BigDL4CDSW](https://github.com/dell-ai-engineering/BigDL4CDSW) repository.
 
 ### Versions
-- BigDL 0.6.0
-- Analytics Zoo 0.2.0
+- BigDL 0.7.0
+- Analytics Zoo 0.3.0
 - Spark 2.2
 - Scala 2.11.8
 - Java 8
@@ -43,49 +43,49 @@ A docker registry is secured using TLS and requires a certificate. [Docker regis
 #### Build the container
 Build the container for BigDL
 ```
-    docker build --network=host -t <registry-name>/bigdl:0.6.0 . -f Dockerfile
+    docker build --network=host -t <registry-name>/bigdl:0.7.0 . -f Dockerfile
 ```
 
 Build the container for Analytics Zoo
 ```    
-    docker build --network=host -t <registry-name>/analytics-zoo:0.2.0 . -f Dockerfile
+    docker build --network=host -t <registry-name>/analytics-zoo:0.3.0 . -f Dockerfile
 ```
 
 Change the docker repo from ```<registry-name>``` to docker registry name.
 
 #### Test that it works
 ```
-    docker run -it <registry-name>/bigdl:0.6.0 /bin/bash
+    docker run -it <registry-name>/bigdl:0.7.0 /bin/bash
 ```
 OR
 ```
-    docker run -it <registry-name>/analytics-zoo:0.2.0 /bin/bash
+    docker run -it <registry-name>/analytics-zoo:0.3.0 /bin/bash
 ``` 
 You can exit out of the container by typing 'exit'.
 
 #### Push the container image
 ```
-    docker push <registry-name>/bigdl:0.6.0
+    docker push <registry-name>/bigdl:0.7.0
 ```
 OR
 ```
-    docker push <registry-name>/analytics-zoo:0.2.0
+    docker push <registry-name>/analytics-zoo:0.3.0
 ```
 
 ### Add the engine to CDSW
 1. Log in to CDSW as a site administrator
-2. Go to Admin and then Engines
-3. Name the engine and add the docker registry location
+2. Go to "Admin" followed by "Engines"
+3. On a blank line: name the engine, specify the docker registry location, and add this new entry
 
 ### Verify that the engine works
 1. Log in to CDSW
 2. Create a new project
 3. Copy the spark-defaults.conf file from the respository to the root folder of the CDSW project 
 4. Open a new workbench session
-5. Before starting the workbench change the selection to the new BigDL engine or Analytics Zoo engine
-6. Start the engine by opening a workbench
+5. Before starting the workbench change the engine image selection to the new BigDL or Analytics Zoo engine
+6. Start the engine by choosing "Launch Session"
 
 
 ### spark-defaults.conf
-For both BigDL and Analytic Zoo, sample spark-defaults.conf files are provided in the corresponding folder. These files need to be copied to the root directory of each CDSW project. The files specifies the Spark parameters for the project. The parameters must be edited to suite the requirements for the project
+For both BigDL and Analytic Zoo, sample spark-defaults.conf files are provided in the corresponding folder. These files need to be copied to the root directory of each CDSW project. The files specify the Spark parameters for the project. The parameters must be edited to suit the requirements for the project.
 
