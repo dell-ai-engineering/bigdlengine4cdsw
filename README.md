@@ -4,9 +4,9 @@
 This repository contains preconfigured engines for the Dell EMC Ready Solution for AI - Machine Learning with Cloudera Hadoop. There are two engines. One is configured with [Intel BigDL](https://bigdl-project.github.io/master/#whitepaper/) a distributed deep learning library for Apache Spark. The other is configured with [Analytics Zoo](http://analytics-zoo.github.io/) a unified analytics + AI platform for Spark. Jumpstart examples are located in the [BigDL4CDSW](https://github.com/dell-ai-engineering/BigDL4CDSW) repository.
 
 ### Versions
-- BigDL 0.7.0
-- Analytics Zoo 0.3.0
-- Spark 2.2
+- BigDL 0.7.2
+- Analytics Zoo 0.4.0
+- Spark 2.4
 - Scala 2.11.8
 - Java 8
 
