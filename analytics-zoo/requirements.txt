@@ -1,7 +1,7 @@
 six
 psutil==5.4.5
 h5py==2.7.1
-numpy==1.13.3
+numpy==1.22.0
 pandas
 scipy==1.0.0
 sklearn
